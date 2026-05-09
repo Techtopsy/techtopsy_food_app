@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:food_app/utils/dimensions.dart';
 
 class BigText extends StatelessWidget {
-  final Color? color;
+  Color? color;
   final String text;
   double size;
   TextOverflow overFlow;
-  BigText({super.key, this.color = const Color(0xFF332d2b), required this.text, this.size=0, this.overFlow=TextOverflow.ellipsis});
+  BigText({super.key, this.color = const Color(0xFF89dad0), required this.text, this.size=20, this.overFlow=TextOverflow.ellipsis});
 
   @override
   Widget build(BuildContext context) {
