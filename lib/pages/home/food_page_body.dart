@@ -84,11 +84,9 @@ Widget build(BuildContext context){
           ),
         ),
          //list of food and images
-        Container(
-          height: 900,
-          child: ListView.builder(
+        ListView.builder(
             physics: NeverScrollableScrollPhysics(),
-            //shrinkWrap: true,
+            shrinkWrap: true,
             itemCount: 10,
             itemBuilder: (context, index){
             return Container(
@@ -129,7 +127,21 @@ Widget build(BuildContext context){
                           SizedBox(height: Dimensions.height10,),
                           SmallText(text: "With chinese characteristics"),
                           SizedBox(height: Dimensions.height10,),
-                          Row()
+                          Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                          IconAndTextWidget(icon: Icons.circle_sharp,
+                          text: "Normal",
+                          iconColor: AppColors.iconColor1),
+      
+                        IconAndTextWidget(icon: Icons.location_on,
+                         text: "1.7km",
+                         iconColor: AppColors.mainColor),
+      
+                        IconAndTextWidget(icon: Icons. access_time_rounded,
+                          text: "32min", iconColor: AppColors.iconColor2)
+                           ],
+                          )
                         ],
                       ),
                     ),
@@ -140,7 +152,6 @@ Widget build(BuildContext context){
           );
          }
         ),
-       )
       ] 
     ); 
 }
